@@ -1,23 +1,22 @@
 #include<stdio.h>
-int cout_one_bits(unsigned int value)
-{
-    int cout = 0;
-    while(value)
-    {
-        value=value&(value-1);
-        cout++;
+int main(){
+    char str[40];
+    int remainder[32];
+    int b,k,i,cnt=o;
+    unsigned int a=-1;
+    k=0;
+    printf("Max value of unsigned int %u\n",a);
+    while(a!=0){
+        b=a/2;
+        k++;
+        reminder[k]=a-b*2;
+        a=a/2;
+    };
+    for(i=k;i>1;i--){
+        if(reminder[i]==1){
+            cnt++;
+        }
     }
-    return cout;
-}
-void main()
-{
-    int nums[10];
-    unsigned int num=0,i=0;
-    printf("write a number:");
-    while((nums[i]=getchar())&&nums[i]!='\n')
-    {
-        num=num*10+nums[i]-'0';
-    }
-    printf("%d",cout_one_bits(num));
+    printf("Max bit of unsigned int %d\n",cnt);
     return 0;
-}
+    }
