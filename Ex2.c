@@ -1,22 +1,28 @@
 #include<stdio.h>
-int main(){
-    char str[40];
-    int remainder[32];
-    int b,k,i,cnt=o;
-    unsigned int a=-1;
-    k=0;
-    printf("Max value of unsigned int %u\n",a);
-    while(a!=0){
-        b=a/2;
-        k++;
-        reminder[k]=a-b*2;
-        a=a/2;
-    };
-    for(i=k;i>1;i--){
-        if(reminder[i]==1){
-            cnt++;
+int bitcount(unsigned x);
+int main(void)
+{
+    char a[5];
+    int i=0;
+    int n=0;
+    while(i<7)
+    {
+        a[i]=getchar();
+        n=n*10+(a[i]-'0');
+        i++;
+    }
+    printf("%d\n",n);
+    return 0;
+}
+int bitcount(unsigned x)
+{
+    int b;
+    for(b=0;x!=0;x>>=1)
+    {
+        if(x&01)
+        {
+            b++;
         }
     }
-    printf("Max bit of unsigned int %d\n",cnt);
-    return 0;
-    }
+    return b;
+}
